@@ -38,7 +38,15 @@ plugin.init = async (params) => {
 	if (settings && settings.apikey) {
 		openai = new OpenAI({
 			apiKey: settings.apikey,
+			baseURL: settings.apiBaseUrl || 'https://api.openai.com/v1',
 		});
+
+		// Uncomment the following lines to list available models
+		// const list = await openai.models.list();
+		// for await (const model of list) {
+		// console.log(model.id);
+		// }
+
 		plugin.openai = openai;
 	}
 

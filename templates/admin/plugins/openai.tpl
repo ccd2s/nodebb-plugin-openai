@@ -11,9 +11,18 @@
 						<label class="form-label" for="apikey">API Key</label>
 						<input type="text" id="apikey" name="apikey" title="API Key" class="form-control">
 						<p class="form-text">
-							Get your <a href="https://platform.openai.com/api-keys">API Key</a> and enter it above. Requires a restart.
+							Get your <a href="https://platform.openai.com/api-keys">API Key</a> and enter it above. You can enter a Google Gemini API key if you want to use Google Gemini. Don't forget to change the model used to a gemini variant. Requires a restart.
 						</p>
 					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="apiBaseUrl">API Base Url</label>
+						<input type="text" id="apiBaseUrl" name="apiBaseUrl" title="API Base Url" class="form-control">
+						<p class="form-text">
+							If you want to use Google's Gemini API, enter the base URL here (https://generativelanguage.googleapis.com/v1beta/openai/). Otherwise, leave it blank to use OpenAI's API. Requires a restart.
+						</p>
+					</div>
+
 					<div class="mb-3">
 						<label class="form-label" for="chatgpt-username">ChatGPT Username</label>
 						<input type="text" id="chatgpt-username" name="chatgpt-username" title="ChatGPT Username" class="form-control">
@@ -40,6 +49,7 @@
 							<option value="gpt-4">gpt-4</option>
 							<option value="gpt-4.1-mini">gpt-4.1-mini</option>
 							<option value="gpt-4.1">gpt-4.1</option>
+							<option value="gemini-2.0-flash">gemini-2.0-flash</option>
 						</select>
 					</div>
 					<div class="">
